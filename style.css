@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #F5F3EE; 
+  color: #0D0D0D; 
+  padding-top: 12rem; 
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 3px solid #002F6C; 
+}
+
+.logo {
+  font-size: 3rem;
+  color: #002F6C; 
+  font-weight: 800;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== NAVIGATION ===== */
+nav a {
+  font-size: 1.8rem;
+  color: #0D0D0D;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: .3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #8A0303; 
+  border-bottom: 3px solid #8A0303;
+}
+
+/* ===== MENU ICON ===== */
+#menu-icon {
+  font-size: 3rem;
+  color: #002F6C;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 5rem;
+}
+
+/* ===== HOME ===== */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #002F6C; 
+}
+
+span {
+  color: #8A0303;
+}
+
+.typing-text {
+  font-size: 3.4rem;
+  font-weight: 600;
+  min-width: 280px;
+  color: #002F6C;
+}
+
+.typing-text span::before {
+  content: "Estudiante UCSP";
+  color: #8A0303; 
+  animation: words 16s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: none;
+    animation: none;
+}
+  
+  #sobre-mi, #estudios, #profesores, #companeros {
+    position: relative;
+    z-index: 1;
+  }
+@keyframes cursor {
+  to {
+    border-left: 3px solid transparent;
+  }
+}
+
+@keyframes words {
+  0%, 20% { content: "Estudiante UCSP"; }
+  21%, 40% { content: "Financista en formación"; }
+  41%, 60% { content: "Administradora"; }
+  61%, 80% { content: "Profesional en desarrollo"; }
+  81%, 100% { content: "Luz Marina"; }
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #0D0D0D;
+}
+
+.home-img img {
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #002F6C;
+  transition: .3s ease;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #8A0303;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid #002F6C;
+  color: #002F6C;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #002F6C;
+  box-shadow: 0 0 25px #002F6C;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: white;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #002F6C;
+  letter-spacing: .3rem;
+  font-weight: 600;
+  border: 2px solid #002F6C;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #002F6C;
+  color: white;
+  box-shadow: 0 0 25px #002F6C;
+}
+
+/* ===== TITLES ===== */
+.section-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #002F6C;
+}
+
+.section-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #0D0D0D;
+}
+
+.list {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding-left: 2rem;
+  color: #002F6C;
+}
+
+.list li {
+  margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 995px) {
+  #menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 60%;
+    background: #ffffff;
+    border-left: 3px solid #002F6C;
+    border-bottom: 3px solid #002F6C;
+    border-bottom-left-radius: 2rem;
+    padding: 2rem 3rem;
+    transition: .4s ease;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: #002F6C;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 8rem 2rem;
+    text-align: center;
+  }
+
+  .home-img img {
+    position: relative;
+    z-index: 1; 
+}
+}
+
+
+.social-icons a {
+    pointer-events: auto;
+    position: relative;
+    z-index: 30; 
+}
+.home {
+    position: relative;
+    z-index: 0;
+}
+
+.home-img img {
+    position: relative;
+    z-index: 1; 
+}
+
+.home-content {
+    position: relative;
+    z-index: 20; 
+}
+
+.btn,
+.social-icons a {
+    position: relative;
+    z-index: 25; 
+    pointer-events: auto;
+}
